@@ -16,6 +16,10 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://simonestella.github.io/reboot"),
   title: "Reboot — Il tuo piano di allenamento giornaliero",
   description: "Una timeline di 24 ore con esercizi fisici, tempi di riposo e consigli per uno stile di vita attivo e sano.",
+  icons: {
+    icon: `${basePath}/icon.png`,
+    apple: `${basePath}/apple-icon.png`,
+  },
   appleWebApp: {
     capable: true,
     title: "Reboot",
@@ -58,6 +62,8 @@ export default function RootLayout({
     <html lang="it" suppressHydrationWarning>
       <head>
         <meta httpEquiv="Content-Security-Policy" content={csp} />
+        <link rel="icon" type="image/png" href={`${basePath}/icon.png`} />
+        <link rel="apple-touch-icon" sizes="180x180" href={`${basePath}/apple-icon.png`} />
       </head>
       <body className={`${geist.variable} antialiased`}>
         <AppProviders>

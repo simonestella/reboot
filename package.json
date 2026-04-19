@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && node -e \"const{cpSync,existsSync}=require('fs');if(existsSync('out/apple-icon'))cpSync('out/apple-icon','out/apple-icon.png');\"",
+    "build": "next build && node -e \"const{cpSync,existsSync}=require('fs');[['out/apple-icon','out/apple-icon.png'],['out/icon','out/icon.png']].forEach(([s,d])=>{if(existsSync(s))cpSync(s,d);});\"",
     "start": "next start",
     "lint": "next lint"
   },

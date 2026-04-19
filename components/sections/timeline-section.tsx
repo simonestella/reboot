@@ -172,6 +172,7 @@ function NowMarker({ t, nowLabel }: Readonly<{ t: (k: string) => string; nowLabe
             background: "var(--primary)",
             top: "50%", left: "50%",
             translateX: "-50%", translateY: "-50%",
+            willChange: "transform, opacity",
           }}
           animate={{ scale: [1, 2.4, 1], opacity: [0.45, 0, 0.45] }}
           transition={{ duration: 2.2, repeat: Infinity, ease: "easeInOut" }}
@@ -248,6 +249,7 @@ function ExerciseRow({ ex, locale, t, onSelect, nowMinutes }: Readonly<{
               background: ex.gradientFrom,
               top: "50%", left: "50%",
               translateX: "-50%", translateY: "-50%",
+              willChange: "transform, opacity",
             }}
             animate={{ scale: [1, 2.4, 1], opacity: [0.5, 0, 0.5] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
@@ -365,6 +367,7 @@ function SleepRow({ item, locale, nowMinutes }: Readonly<{
               background: "var(--primary)",
               top: "50%", left: "50%",
               translateX: "-50%", translateY: "-50%",
+              willChange: "transform, opacity",
             }}
             animate={{ scale: [1, 2.2, 1], opacity: [0.4, 0, 0.4] }}
             transition={{ duration: 2.4, repeat: Infinity, ease: "easeInOut" }}

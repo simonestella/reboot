@@ -18,6 +18,11 @@ export default function manifest(): MetadataRoute.Manifest {
     categories: ["health", "fitness"],
     icons: [
       {
+        src: `${basePath}/icon.png`,
+        sizes: "32x32",
+        type: "image/png",
+      },
+      {
         src: `${basePath}/apple-icon.png`,
         sizes: "180x180",
         type: "image/png",
