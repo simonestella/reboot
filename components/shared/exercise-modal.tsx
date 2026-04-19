@@ -101,14 +101,14 @@ export function ExerciseModal({ exercise, onClose }: ExerciseModalProps) {
                 ].map((stat) => (
                   <div
                     key={stat.label}
-                    className="rounded-2xl p-4 text-center"
+                    className="rounded-2xl p-2.5 sm:p-4 text-center overflow-hidden"
                     style={{
                       background: `linear-gradient(135deg, ${exercise.gradientFrom}10, ${exercise.gradientTo}08)`,
                       border: `1px solid ${exercise.gradientFrom}20`
                     }}
                   >
-                    <div className="text-xl font-bold text-[var(--ink)]">{stat.value}</div>
-                    <div className="text-xs text-[var(--muted)] mt-0.5">{stat.label}</div>
+                    <div className="text-sm sm:text-xl font-bold text-[var(--ink)] leading-tight break-words">{stat.value}</div>
+                    <div className="text-[10px] sm:text-xs text-[var(--muted)] mt-0.5">{stat.label}</div>
                   </div>
                 ))}
               </div>
