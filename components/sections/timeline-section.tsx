@@ -195,12 +195,12 @@ function NowMarker({ t, nowLabel }: Readonly<{ t: (k: string) => string; nowLabe
         />
         <motion.div
           className="flex-shrink-0 flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-bold text-white whitespace-nowrap"
-          style={{ background: "linear-gradient(135deg, var(--primary), var(--primary-end))" }}
+          style={{ background: "linear-gradient(135deg, var(--primary), var(--primary-end))", willChange: "filter" }}
           animate={{
-            boxShadow: [
-              "0 0 0px rgba(27,142,240,0)",
-              "0 0 14px rgba(27,142,240,0.65)",
-              "0 0 0px rgba(27,142,240,0)",
+            filter: [
+              "drop-shadow(0 0 0px rgba(27,142,240,0))",
+              "drop-shadow(0 0 8px rgba(27,142,240,0.7))",
+              "drop-shadow(0 0 0px rgba(27,142,240,0))",
             ],
           }}
           transition={{ duration: 2.8, repeat: Infinity, ease: "easeInOut" }}
